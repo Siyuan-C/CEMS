@@ -172,6 +172,20 @@ public class Login extends JFrame {
 
 
     public static void main(String[] args) {
+
+        //优化UI button
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        }catch(Exception e) {
+            System.out.println(e);
+        }
+
+
         new Login();
     }
 }
